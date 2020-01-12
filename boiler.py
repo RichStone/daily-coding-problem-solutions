@@ -31,6 +31,11 @@ if __name__ == '__main__':
 TASK DESCRIPTION
 """
 
+class Solution:
+    def solve(self, input):
+        return 5
+
+
 if __name__ == '__main__':
     # sample input
     inputs = [ ]
@@ -42,6 +47,6 @@ if __name__ == '__main__':
     for input in inputs:
         print('#############')
         print('sample input: ' + str(input))
-        output = sol.isPalindrome(input)
-        print('output: ' + output)
+        output = sol.solve(input)
+        print('output: ' + str(output))
         print('#############')
