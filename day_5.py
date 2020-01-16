@@ -11,8 +11,6 @@ def cons(a, b):
     return pair
 
 Implement car and cdr.
-
-Is there a way to solve it without an anonymous lambda function as a return for car and cdr?
 """
 
 
@@ -21,8 +19,24 @@ def cons(a, b):
         return f(a, b)
     return pair
 
-# solution goes here
+
+def car(pair):
+    return pair(lambda a,b: a)
+
+
+def cdr(pair):
+    return pair(lambda a,b: b)
+
+
+car_el = car(cons(3,4))
+assert car_el == 3
+
+cdr_el = cdr(cons(3,4))
+assert cdr_el == 4
+
+print('tests passed')
 
 """
-Unsolved
+SOLVED
+My Q: Is there a way to solve it without an anonymous lambda function as a return for car and cdr?
 """
