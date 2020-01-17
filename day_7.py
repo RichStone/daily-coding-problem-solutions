@@ -10,14 +10,25 @@ You can assume that the messages are decodable. For example, '001' is not allowe
 
 
 def is_decodable(num):
-    if num >= 1 and num <= 26:
-        return True
+    return int(num) >= 1 and int(num) <= 26
 
 
 def decode(message):
-    single_tokens = [i for i in str(message)]
-    print(single_tokens)
+    # start with one since there is always an all single numbers count solution
+    decodable_ways_count = 1
     double_tokens = [str(message)[i:i+2] for i in range(0, len(message), 1) if i < len(message) - 1]
-    print(double_tokens)
+    decodable_tokens = [token for token in double_tokens if is_decodable(token)]
+    print(decodable_tokens)
+    decodable_ways_count += len(decodable_tokens)
+    print(decodable_ways_count)
+    return decodable_ways_count
 
-decode('123')
+
+
+decode('123411')
+print(is_decodable('122'))
+
+"""
+SOLVED
+READ SOLUTION 
+"""
