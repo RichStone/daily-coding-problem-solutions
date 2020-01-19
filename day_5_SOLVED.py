@@ -37,6 +37,6 @@ assert cdr_el == 4
 print('tests passed')
 
 """
-SOLVED
+SOLVED 🎉🎉🎉
 My Q: Is there a way to solve it without an anonymous lambda function as a return for car and cdr?
 """

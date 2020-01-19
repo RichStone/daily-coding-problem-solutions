@@ -29,6 +29,6 @@ decode('123411')
 print(is_decodable('122'))
 
 """
-SOLVED
+SOLVED 🎉🎉🎉
 READ SOLUTION 
 """
